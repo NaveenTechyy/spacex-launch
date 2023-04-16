@@ -1,0 +1,86 @@
+.bg-container {
+  background-color: rgb(30, 29, 28);
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.launchitem-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.launchitem-div aside {
+  position: relative;
+  width: 100%;
+}
+.launchitem-div article {
+  padding: 1.25em 1.5em;
+}
+.launchitem-div h2,
+p,
+a {
+  margin: 0;
+  font-weight: 300;
+}
+
+.launchitem-div h1 {
+  color: crimson;
+}
+
+.launchitem-div p {
+  margin: 1.25em 0;
+  font-size: em(13);
+  font-weight: 400;
+  color: #222222;
+}
+
+article {
+  background-color: white;
+  width: inherit;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 45vh;
+}
+
+article a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.link-button {
+  display: flex;
+  justify-content: center;
+}
+
+.link-button {
+  border-radius: 4px;
+  background: crimson;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  transform: scale(1.09);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
