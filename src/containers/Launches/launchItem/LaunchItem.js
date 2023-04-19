@@ -7,7 +7,6 @@ const LaunchItem = () => {
   const { t } = useTranslation();
   const data = useLocation();
   const item = data?.state?.item;
-  console.log("item?.wikipedia", item?.links);
 
   return (
     <div className="bg-container">
