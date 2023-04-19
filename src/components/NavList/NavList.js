@@ -66,7 +66,16 @@ const NavList = () => {
         }}
         className="hamburger-toggle"
       >
-        <i className="bx bx-menu"></i>
+        <svg
+          style={{ backgroundColor: "#fff" }}
+          viewBox="0 0 100 80"
+          width="30"
+          height="30"
+        >
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
       </div>
     </nav>
   );

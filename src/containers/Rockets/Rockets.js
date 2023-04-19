@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useEffect, useState, memo } from "react";
 import "./Rockets.css";
 import { useSelector, useDispatch } from "react-redux";
