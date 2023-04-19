@@ -1,61 +1,44 @@
 import React, { useState } from "react";
-
+import "./AppCrash.css";
 import PropTypes from "prop-types";
-
-// import { ErrorDiv, ErrorDescription } from "../HeroImage/HeroImage.styles";
-
-// import { t } from 'i18next';
 
 const AppCrash = ({ error, errorInfo, t }) => {
   const [errorDisplay, setErrorDisplay] = useState(false);
 
-  return (
-    <>
-      {/* <ErrorDiv> */}
-      <div style={{ fontFamily: "sans-serif" }}>Error</div>
+  const handleErrorDisplay = () => {
+    setErrorDisplay(!errorDisplay);
+  };
 
-      <button
-        style={{
-          cursor: "pointer",
-          margin: "15px",
-          fontFamily: "sans-serif",
-        }}
-        onClick={() => {
-          setErrorDisplay(!errorDisplay);
-        }}
-      >
+  return (
+    <div className="container">
+      <p>Hmm.... There occured an error. Please contact your administrator</p>
+
+      <button className="error-btn" onClick={handleErrorDisplay}>
         {errorDisplay ? "Hide error" : "See more details"}
       </button>
 
-      {/* <ErrorDescription
-          style={{
-            display: errorDisplay ? "block" : "none",
+      <div
+        className="error-info-btn"
+        style={{
+          display: errorDisplay ? "block" : "none",
+        }}
+      >
+        <div>
+          <b>Error: </b>
+          {error}
+        </div>
 
-            fontFamily: "sans-serif",
-          }}
-        > */}
-      <div>
-        <b>Error: </b>
-
-        {error}
+        <div>
+          <b>ErrorInfo: </b>
+          {errorInfo}
+        </div>
       </div>
-
-      <div>
-        <b>ErrorInfo: </b>
-
-        {errorInfo}
-      </div>
-      {/* </ErrorDescription>
-      </ErrorDiv> */}
-    </>
+    </div>
   );
 };
 
 AppCrash.propTypes = {
   error: PropTypes.string,
-
-  t: PropTypes.func,
-
   errorInfo: PropTypes.string,
 };
 

@@ -1,0 +1,21 @@
+.container {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(158 158 110);
+  height: 713px;
+}
+
+.error-btn {
+  cursor: pointer;
+  font-family: sans-serif;
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.error-info-btn {
+  font-family: sans-serif;
+}
