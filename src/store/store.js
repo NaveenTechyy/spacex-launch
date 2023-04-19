@@ -9,7 +9,7 @@ const store = configureStore({
     history: HistorySlice,
     launch: LaunchSlice,
     rockets: RocketsSlice,
-    AboutInfo: AboutSlice,
+    aboutInfo: AboutSlice,
   },
 });
 export default store;
