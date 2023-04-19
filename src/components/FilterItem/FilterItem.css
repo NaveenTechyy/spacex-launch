@@ -1,5 +1,6 @@
 .filter-area {
-  margin-top: 100px;
+  margin: 100px 0 0 100px;
+  display: flex;
 }
 
 .select-selected {
@@ -53,6 +54,13 @@
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filter-by-name1,
+.filter-by-name2,
+.filter-by-name3 {
+  color: #fff;
+  margin-right: 20px;
 }
 
 @media only screen and (max-width: 600px) {

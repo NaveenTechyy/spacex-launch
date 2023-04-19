@@ -3,21 +3,22 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import "./locales/index";
 
-import NavList from "./components/NavList/NavList";
+import NavList from "./components/navList/NavList";
 
 const Home = React.lazy(() => import("./containers/Home/Home"));
 const History = React.lazy(() => import("./containers/History/History"));
 const HistoryItem = React.lazy(() =>
-  import("./containers/History/HistoryItem/HistoryItem")
+  import("./containers/History/historyItem/HistoryItem")
 );
 const Launches = React.lazy(() => import("./containers/Launches/Launches"));
 const LaunchItem = React.lazy(() =>
-  import("./containers/Launches/AllLaunches/LaunchItem/LaunchItem")
+  import("./containers/Launches/launchItem/LaunchItem")
 );
 const Rockets = React.lazy(() => import("./containers/Rockets/Rockets"));
 const RocketItem = React.lazy(() =>
-  import("./containers/Rockets/RocketItem/RocketItem")
+  import("./containers/Rockets/rocketItem/RocketItem")
 );
 const PageNotFound = React.lazy(() =>
   import("./containers/PageNotFound/PageNotFound")

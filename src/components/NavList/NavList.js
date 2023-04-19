@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import "./NavList.css";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const NavList = () => {
+  const { t } = useTranslation();
   const [className, setClassName] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="logo" title="SpaceX logo">
         <NavLink to="/" className="logo">
-          SpaceX
+          {t("spaceX")}
         </NavLink>
       </div>
       <ul className={className ? "navlinks active" : "navlinks"}>
@@ -21,7 +23,7 @@ const NavList = () => {
             to="/"
             className="nav-links"
           >
-            Home
+            {t("home")}
           </NavLink>
         </li>
         <li className="links">
@@ -32,7 +34,7 @@ const NavList = () => {
             to="/history"
             className="nav-links"
           >
-            History
+            {t("history")}
           </NavLink>
         </li>
         <li className="links">
@@ -43,7 +45,7 @@ const NavList = () => {
             to="/launches"
             className="nav-links"
           >
-            Launches
+            {t("launches")}
           </NavLink>
         </li>
         <li className="links">
@@ -54,7 +56,7 @@ const NavList = () => {
             to="/rockets"
             className="nav-links"
           >
-            Rockets
+            {t("rockets")}
           </NavLink>
         </li>
       </ul>

@@ -1,23 +1,24 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getHistoryAsync } from "../../store/slice/HistorySlice";
 import "./History.css";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { getHistoryAsync } from "../../store/slice/HistorySlice";
+import { useTranslation } from "react-i18next";
 
 const History = () => {
+  const { t } = useTranslation();
   const historyData = useSelector(state => state?.history);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.log("historyData", historyData);
-
   const navigation = item => {
-    console.log("item", item);
-    navigate(`/history/${item.title}`, { state: { item } });
+    const title = item?.title?.replace(/\s+/g, "-");
+    navigate(`/history/${title}`, { state: { item } });
   };
+
   useEffect(() => {
     dispatch(getHistoryAsync("/history"));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="history-container">
@@ -32,13 +33,17 @@ const History = () => {
               key={item.id}
             >
               <h3>{`Title : ${item.title}`}</h3>
-              <h3>Date : {date}</h3>
-              <h3>Time : {time}</h3>
+              <h3>
+                {t("date")} {date}
+              </h3>
+              <h3>
+                {t("time")} {time}
+              </h3>
             </div>
             <div className="right-card">
               <div className="hover-button">
                 <a href={item?.links?.article} rel="noreferrer" target="_blank">
-                  Article
+                  {t("readMore")}
                 </a>
               </div>
             </div>

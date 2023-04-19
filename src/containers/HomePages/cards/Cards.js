@@ -1,9 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Cards.css";
-import CardItem from "./CardItem";
 import "../../../assets/history.jpeg";
 import "../../../assets/rockets.jpg";
 import "../../../assets/launches.jpg";
+
+import CardItem from "./CardItem";
 
 function Cards() {
   return (
@@ -36,4 +37,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default memo(Cards);

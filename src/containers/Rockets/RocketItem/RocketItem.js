@@ -1,10 +1,11 @@
 import React from "react";
 import "./RocketItem.css";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const RocketItem = () => {
+  const { t } = useTranslation();
   const data = useLocation();
-  console.log("data", data);
   const item = data?.state?.item;
 
   return (
@@ -22,7 +23,7 @@ const RocketItem = () => {
           <div className="button-div">
             <button className="wiki-link">
               <a href={item?.wikipedia} rel="noreferrer" target="_blank">
-                Wikipedia
+                {t("wikipedia")}
               </a>
             </button>
           </div>

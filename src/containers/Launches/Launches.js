@@ -6,6 +6,7 @@ import {
   getPastLaunchAsync,
   getUpcomingLaunchAsync,
 } from "../../store/slice/LaunchSlice";
+import PropTypes from "prop-types";
 import "./Launches.css";
 
 const Launches = () => {
@@ -16,11 +17,12 @@ const Launches = () => {
     dispatch(getLaunchAsync("/launches"));
     dispatch(getPastLaunchAsync("/launches/past"));
     dispatch(getUpcomingLaunchAsync("/launches/upcoming"));
-  }, []);
+  }, [dispatch]);
 
   const allData = launchData?.LaunchSlice?.launchData.filter(
     item => item?.links?.patch?.small
   );
+  console.log("allData", allData);
   const upcomingData = launchData?.upcomingLaunchSlice?.upcomingLaunchData;
 
   return (
@@ -47,4 +49,7 @@ const Launches = () => {
   );
 };
 
+Launches.propTypes = {
+  allData: PropTypes.array,
+};
 export default Launches;

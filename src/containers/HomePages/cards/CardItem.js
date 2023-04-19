@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function CardItem(props) {
+const CardItem = props => {
   const { src, text, label, path } = props;
   return (
     <>
@@ -23,6 +23,6 @@ function CardItem(props) {
       </li>
     </>
   );
-}
+};
 
 export default CardItem;
