@@ -22,7 +22,7 @@
 }
 
 .rocket-description {
-  background-color: beige;
+  background-color: #979785;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 600px;
@@ -45,6 +45,11 @@
 .wiki-link a {
   color: white;
   font-weight: 700;
+}
+.button-div :hover {
+  transform: scale(1.22);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
 }
 .button-div {
   cursor: pointer;

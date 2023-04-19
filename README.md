@@ -1,8 +1,14 @@
 # Getting Started with Create React App
 
+# SpaceX Application
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to run
+
+In the project directory, you can install dependencies using:
+
+### `npm install`
 
 In the project directory, you can run:
 

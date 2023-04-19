@@ -28,6 +28,7 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   cursor: pointer;
+  font-family: sans-serif;
 }
 
 .left-card:hover {

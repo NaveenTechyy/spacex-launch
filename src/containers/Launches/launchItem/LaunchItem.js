@@ -7,6 +7,7 @@ const LaunchItem = () => {
   const { t } = useTranslation();
   const data = useLocation();
   const item = data?.state?.item;
+  console.log("item?.wikipedia", item?.links);
 
   return (
     <div className="bg-container">
@@ -22,7 +23,7 @@ const LaunchItem = () => {
           <h1>{item?.name}</h1>
           <p>{item?.details}</p>
           <div className="link-button">
-            <a href={item?.wikipedia} rel="noreferrer" target="_blank">
+            <a href={item?.links?.wikipedia} rel="noreferrer" target="_blank">
               {t("wikipedia")}
             </a>
           </div>
