@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getHistoryAsync } from "../../store/slice/HistorySlice";
 import { useTranslation } from "react-i18next";
+import { format } from "date-fns";
 
 const History = () => {
   const { t } = useTranslation();
@@ -24,7 +25,8 @@ const History = () => {
     <div className="history-container">
       {historyData?.historyData.map(item => {
         const date = item.event_date_utc.split("T")[0];
-        const time = item.event_date_utc.split("T")[1];
+        const formattedDate = format(new Date(date), "MMMM dd, yyyy hh:mm a");
+
         return (
           <div key={item.id} className="card-container">
             <div
@@ -34,10 +36,7 @@ const History = () => {
             >
               <h3>{`Title : ${item.title}`}</h3>
               <h3>
-                {t("date")} {date}
-              </h3>
-              <h3>
-                {t("time")} {time}
+                {t("date")} {formattedDate}
               </h3>
             </div>
             <div className="right-card">
