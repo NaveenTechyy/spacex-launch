@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getRocketsDataAsync } from "../../store/slice/RocketsSlice";
 import { useNavigate } from "react-router-dom";
 
-import FilterItem from "../../components/filterItem/FilterItem";
+import FilterItem from "../../components/FilterItem/FilterItem";
 import DisplayRocketList from "./DisplayRocketList";
 
 const Rockets = () => {

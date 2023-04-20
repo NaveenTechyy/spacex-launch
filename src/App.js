@@ -6,12 +6,12 @@ import store from "./store/store";
 import "./locales/index";
 import { useTranslation } from "react-i18next";
 
-import NavList from "./components/navList/NavList";
+import NavList from "./components/NavList/NavList";
 
 const Home = React.lazy(() => import("./containers/Home/Home"));
 const History = React.lazy(() => import("./containers/History/History"));
 const HistoryItem = React.lazy(() =>
-  import("./containers/History/historyItem/HistoryItem")
+  import("./containers/History/HistoryItem/HistoryItem")
 );
 const Launches = React.lazy(() => import("./containers/Launches/Launches"));
 const LaunchItem = React.lazy(() =>
@@ -19,7 +19,7 @@ const LaunchItem = React.lazy(() =>
 );
 const Rockets = React.lazy(() => import("./containers/Rockets/Rockets"));
 const RocketItem = React.lazy(() =>
-  import("./containers/Rockets/rocketItem/RocketItem")
+  import("./containers/Rockets/RocketItem/RocketItem")
 );
 const PageNotFound = React.lazy(() =>
   import("./containers/PageNotFound/PageNotFound")
