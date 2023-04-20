@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import "./locales/index";
+import { useTranslation } from "react-i18next";
 
 import NavList from "./components/navList/NavList";
 
@@ -24,9 +25,10 @@ const PageNotFound = React.lazy(() =>
   import("./containers/PageNotFound/PageNotFound")
 );
 
-function App() {
+const App = () => {
+  const { t } = useTranslation();
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>{t("loading")}</div>}>
       <Provider store={store}>
         <Router>
           <NavList />
@@ -44,6 +46,6 @@ function App() {
       </Provider>
     </Suspense>
   );
-}
+};
 
 export default App;

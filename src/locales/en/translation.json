@@ -17,5 +17,11 @@
   "home": "Home",
   "history": "History",
   "launches": "Launches",
-  "rockets": "Rockets"
+  "rockets": "Rockets",
+  "errorMsg": "Hmm.... There occured an error. Please contact your administrator",
+  "hideErr": "Hide Error",
+  "seeMoreDetails": "See more details",
+  "error": "Error: ",
+  "errorInfo": "ErrorInfo: ",
+  "loading": "Loading..."
 }
