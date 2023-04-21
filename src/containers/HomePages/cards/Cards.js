@@ -19,16 +19,16 @@ function Cards() {
               path="/history"
             />
             <CardItem
-              src={require("../../../assets/rockets.jpg")}
-              text="Rockets owned by spaceX"
-              label="Rockets"
-              path="/rockets"
-            />
-            <CardItem
               src={require("../../../assets/launches.jpg")}
               text="Launches by spaceX"
               label="Launches"
               path="/launches"
+            />
+            <CardItem
+              src={require("../../../assets/rockets.jpg")}
+              text="Rockets owned by spaceX"
+              label="Rockets"
+              path="/rockets"
             />
           </ul>
         </div>
