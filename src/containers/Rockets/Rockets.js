@@ -16,7 +16,8 @@ const Rockets = () => {
 
   const navigate = useNavigate();
   const navigation = item => {
-    navigate(`/rockets/${item.name}`, { state: { item } });
+    const name = item?.name?.replace(/\s+/g, "-");
+    navigate(`/rockets/${name}`, { state: { item } });
   };
 
   useEffect(() => {
