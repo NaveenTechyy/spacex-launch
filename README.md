@@ -20,6 +20,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `About appliation`
+
+This application contains 4 screens
+
+1.  Home
+2.  History
+3.  Launches
+4.  Rockets
+
+Rockets page will be http://localhost:3000/rockets and the selected rocket information will be under localhost/rockets/falcon-9
+Same goes to History & Launches
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
