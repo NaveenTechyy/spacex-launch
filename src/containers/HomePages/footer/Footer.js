@@ -24,7 +24,7 @@ const Footer = () => {
           {t("flickr")}
         </a>
       </div>
-      <div className="copyright">@Copyright Naveen</div>
+      <div className="copyright">{t("copyrights")}</div>
     </div>
   );
 };
