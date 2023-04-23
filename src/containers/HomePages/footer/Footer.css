@@ -25,3 +25,8 @@
 .links-container:hover a {
   color: #eadfdf;
 }
+
+.copyright {
+  color: #ffffff;
+  margin: 30px;
+}
